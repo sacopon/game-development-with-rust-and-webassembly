@@ -1,0 +1,17 @@
+{
+  "name": "game-development-with-rust-and-webassembly",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build-wasm && vite",
+    "build-wasm": "wasm-pack build ./src/wasm --target web",
+    "build": "tsc && npm run build-wasm && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@zebing/vite-plugin-wasm-pack": "^1.0.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4"
+  }
+}
